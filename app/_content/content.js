@@ -60,6 +60,12 @@ export const featuredContent = {
 import appScreen1 from "@/public/img/application/app-screen-1.png";
 import appScreen2 from "@/public/img/application/app-screen-2.png";
 import appScreen3 from "@/public/img/application/app-screen-3.png";
+import {
+  IoInfiniteOutline,
+  IoLeafOutline,
+  IoNutritionOutline,
+  IoPauseOutline,
+} from "react-icons/io5";
 
 export const howItWorksContent = {
   header: "Your daily dose of health in 3 simple steps",
@@ -134,7 +140,7 @@ export const mealsContent = {
   link: "See all recipes →",
 };
 
-/* TESTIMONIALS */
+/* TESTIMONIALS AND GALLERY IMAGES */
 
 const testimonials = importAll(
   require.context("@/public/img/testimonials", false, /\.(png|jpe?g|svg)$/),
@@ -174,9 +180,73 @@ export const testimonialsContent = {
   ],
 };
 
-/* GALLERY */
-
 const gallery = importAll(
   require.context("@/public/img/gallery", false, /\.(png|jpe?g|svg)$/),
 );
 export const galleryImages = gallery.map((image) => image.default);
+
+/* PRICING AND FEATURES */
+
+export const pricingContent = {
+  header: "Eating well without breaking the bank",
+  subHeader: "Pricing",
+  footer:
+    "Prices include all applicable taxes. You can cancel at any time. Both plans include the following:",
+  pricingPlans: [
+    {
+      name: "Starter",
+      price: 399,
+      description: "per month. That's just $13 per meal!",
+      features: [
+        "1 meal per day",
+        "Order from 11am to 9pm",
+        "Delivery is free",
+        "unavailable",
+      ],
+      button: "Start eating well",
+    },
+    {
+      name: "Complete",
+      price: 649,
+      description: "per month. That's just $11 per meal!",
+      features: [
+        <>
+          <strong>2 meals</strong> per day
+        </>,
+        <>
+          Order <strong>24/7</strong>
+        </>,
+        "Delivery is free",
+        "Get access to latest recipes",
+      ],
+      button: "Start eating well",
+    },
+  ],
+};
+
+export const featuresContent = [
+  {
+    title: "Never cook again!",
+    content:
+      "Our subscriptions cover 365 days per year, even including major holidays.",
+    icon: <IoInfiniteOutline />,
+  },
+  {
+    title: "Local and organic",
+    content:
+      "Our cooks only use local, fresh, and organic products to prepare your meals.",
+    icon: <IoNutritionOutline />,
+  },
+  {
+    title: "No waste",
+    content:
+      "All our partners only use reusable containers to package all your meals.",
+    icon: <IoLeafOutline />,
+  },
+  {
+    title: "Pause anytime",
+    content:
+      "Going on vacation? Just pause your subscription, and we refund unused days.",
+    icon: <IoPauseOutline />,
+  },
+];
