@@ -133,3 +133,50 @@ export const mealsContent = {
   ],
   link: "See all recipes →",
 };
+
+/* TESTIMONIALS */
+
+const testimonials = importAll(
+  require.context("@/public/img/testimonials", false, /\.(png|jpe?g|svg)$/),
+);
+const testimonialsImages = testimonials.map(
+  (testimonial) => testimonial.default,
+);
+
+export const testimonialsContent = {
+  header: "Once you try it, you can't go back",
+  subHeader: "Testimonials",
+  testimonials: [
+    {
+      customer: "Dave Bryson",
+      testimonial:
+        "Inexpensive, healthy and great-tasting meals, without even having to order manually! It feels truly magical.",
+      image: testimonialsImages[1],
+    },
+    {
+      customer: "Ben Hadley",
+      testimonial:
+        "The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing not to worry about food anymore!",
+      image: testimonialsImages[0],
+    },
+    {
+      customer: "Steve Miller",
+      testimonial:
+        "Omnifood is a life saver! I just started a company, so there's no time for cooking. I couldn't live without my daily meals now!",
+      image: testimonialsImages[3],
+    },
+    {
+      customer: "Hannah Smith",
+      testimonial:
+        "I got Omnifood for the whole family, and it frees up so much time! Plus, everything is organic and vegan and without plastic.",
+      image: testimonialsImages[2],
+    },
+  ],
+};
+
+/* GALLERY */
+
+const gallery = importAll(
+  require.context("@/public/img/gallery", false, /\.(png|jpe?g|svg)$/),
+);
+export const galleryImages = gallery.map((image) => image.default);
