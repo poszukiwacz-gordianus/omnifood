@@ -4,6 +4,8 @@ import { heroContent } from "../_content/content";
 
 export default function Hero() {
   const {
+    primaryButton,
+    secondaryButton,
     header,
     description,
     avatars,
@@ -25,13 +27,13 @@ export default function Hero() {
             href="#"
             className="mr-4 inline-block rounded-lg bg-primary-500 px-8 py-4 text-xl font-semibold text-secondary-50 transition-all duration-300 hover:bg-primary-600"
           >
-            Start eating well
+            {primaryButton}
           </Link>
           <Link
             href="#"
-            className="inline-block rounded-lg bg-white px-8 py-4 text-xl font-semibold text-secondary-500 shadow-[inset_0_0_0_3px_#F5F5F5] transition-all duration-300 hover:bg-primary-200"
+            className="inline-block rounded-lg bg-white px-8 py-4 text-xl font-semibold text-secondary-500 shadow-[inset_0_0_0_5px_#fff] transition-all duration-300 hover:bg-primary-100"
           >
-            Learn more &darr;
+            {secondaryButton}
           </Link>
 
           <div className="mt-20 flex items-center gap-8">

@@ -1,7 +1,8 @@
-import Featured from "./_components/Featured";
-import Header from "./_components/Header";
-import Hero from "./_components/Hero";
-import HowItWorks from "./_components/HowItWorks";
+import Featured from "./_section/Featured";
+import Header from "./_section/Header";
+import Hero from "./_section/Hero";
+import HowItWorks from "./_section/HowItWorks";
+import Meals from "./_section/Meals";
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
         <Hero />
         <Featured />
         <HowItWorks />
+        <Meals />
       </main>
     </>
   );

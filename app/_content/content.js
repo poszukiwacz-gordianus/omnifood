@@ -25,6 +25,8 @@ const avatars = importAll(
 const avatarImages = avatars.map((avatar) => avatar.default);
 
 export const heroContent = {
+  primaryButton: "Start eating well",
+  secondaryButton: `Learn more ↓`,
   header: "A healthy meal delivered to your door, every single day",
   description:
     "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
@@ -59,29 +61,62 @@ import appScreen1 from "@/public/img/application/app-screen-1.png";
 import appScreen2 from "@/public/img/application/app-screen-2.png";
 import appScreen3 from "@/public/img/application/app-screen-3.png";
 
-export const stepsContent = [
-  {
-    step: "01",
-    header: "Tell us what you like (and what not)",
-    description:
-      "Never again waste time thinking about what to eat! Omnifood AI will create a 100% personalized weekly meal plan just for you. It makes sure you get all the nutrients and vitamins you need, no matter what diet you follow!",
-    image: appScreen1,
-    alt: "iPhone app preferences selection screen",
-  },
-  {
-    step: "02",
-    header: "Approve your weekly meal plan",
-    description:
-      " Once per week, approve the meal plan generated for you by Omnifood AI. You can change ingredients, swap entire meals, or even add your own recipes.",
-    image: appScreen2,
-    alt: "iPhone app meal approving plan screen",
-  },
-  {
-    step: "03",
-    header: "Receive meals at convenient time",
-    description:
-      " Best chefs in town will cook your selected meal every day, and we will deliver it to your door whenever works best for you. You can change delivery schedule and address daily!",
-    image: appScreen3,
-    alt: "iPhone app delivery screen",
-  },
-];
+export const howItWorksContent = {
+  header: "Your daily dose of health in 3 simple steps",
+  subHeader: "How it works",
+  stepsContent: [
+    {
+      step: "01",
+      header: "Tell us what you like (and what not)",
+      description:
+        "Never again waste time thinking about what to eat! Omnifood AI will create a 100% personalized weekly meal plan just for you. It makes sure you get all the nutrients and vitamins you need, no matter what diet you follow!",
+      image: appScreen1,
+      alt: "iPhone app preferences selection screen",
+    },
+    {
+      step: "02",
+      header: "Approve your weekly meal plan",
+      description:
+        " Once per week, approve the meal plan generated for you by Omnifood AI. You can change ingredients, swap entire meals, or even add your own recipes.",
+      image: appScreen2,
+      alt: "iPhone app meal approving plan screen",
+    },
+    {
+      step: "03",
+      header: "Receive meals at convenient time",
+      description:
+        " Best chefs in town will cook your selected meal every day, and we will deliver it to your door whenever works best for you. You can change delivery schedule and address daily!",
+      image: appScreen3,
+      alt: "iPhone app delivery screen",
+    },
+  ],
+};
+
+/* MEALS */
+
+const meals = importAll(
+  require.context("@/public/img/meals", false, /\.(png|jpe?g|svg)$/),
+);
+const mealsImages = meals.map((meal) => meal.default);
+
+export const mealsContent = {
+  header: "Omnifood works with any diet",
+  subHeader: "Meals",
+  meals: [
+    {
+      mealImage: mealsImages[0],
+      meal: "Japanese Gyozas",
+      categories: [{ category: "Vegetarian", tagColor: "#51cf66" }],
+      properties: { calories: 650, nutriScore: 74, rating: 4.9, reviews: 537 },
+    },
+    {
+      mealImage: mealsImages[1],
+      meal: "Avocado Salad",
+      categories: [
+        { category: "Vegan", tagColor: "#94d82d" },
+        { category: "Paleo", tagColor: "#ffd43b" },
+      ],
+      properties: { calories: 400, nutriScore: 92, rating: 4.8, reviews: 441 },
+    },
+  ],
+};
