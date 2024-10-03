@@ -1,14 +1,12 @@
-import hero from "@/public/img/hero.png";
-import logo from "@/public/img/omnifood-logo.png";
-import appScreen1 from "@/public/img/application/app-screen-1.png";
-import appScreen2 from "@/public/img/application/app-screen-2.png";
-import appScreen3 from "@/public/img/application/app-screen-3.png";
-
 const importAll = (requireContext) => requireContext.keys().map(requireContext);
-const avatars = importAll(
-  require.context("@/public/img/customers", false, /\.(png|jpe?g|svg)$/),
-);
-const avatarImages = avatars.map((avatar) => avatar.default);
+
+/* HEADER */
+
+import logo from "@/public/img/omnifood-logo.png";
+export const logoContent = {
+  logo,
+  alt: "omnifood logo",
+};
 
 export const navigationContent = [
   { link: "#", text: "Section 1" },
@@ -18,10 +16,13 @@ export const navigationContent = [
   { link: "#", text: "Section 5" },
 ];
 
-export const logoContent = {
-  logo,
-  alt: "omnifood logo",
-};
+/* HERO */
+
+import hero from "@/public/img/hero.png";
+const avatars = importAll(
+  require.context("@/public/img/customers", false, /\.(png|jpe?g|svg)$/),
+);
+const avatarImages = avatars.map((avatar) => avatar.default);
 
 export const heroContent = {
   header: "A healthy meal delivered to your door, every single day",
@@ -35,6 +36,28 @@ export const heroContent = {
   altHero:
     "Three images, woman enjoying food, meals in storage container, and food bowls on a table",
 };
+
+/* FEATURED */
+
+const logos = importAll(
+  require.context("@/public/img/logos", false, /\.(png|jpe?g|svg)$/),
+);
+const logoImages = logos.map((logo) => logo.default);
+const altLogos = logoImages.map(
+  (logo) =>
+    logo.src.split("media/")[1].split(".")[0].replaceAll("-", " ") + " logo",
+);
+
+export const featuredContent = {
+  featuredIn: "As featured in",
+  logoImages,
+  altLogos,
+};
+
+/* HOW IT WORKS */
+import appScreen1 from "@/public/img/application/app-screen-1.png";
+import appScreen2 from "@/public/img/application/app-screen-2.png";
+import appScreen3 from "@/public/img/application/app-screen-3.png";
 
 export const stepsContent = [
   {

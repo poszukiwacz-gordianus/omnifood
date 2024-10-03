@@ -6,7 +6,7 @@ export default function HowItWorks() {
   return (
     <>
       <section className="py-24">
-        <div className="mx-auto max-w-[1200px] px-8">
+        <div className="mx-auto max-w-[1200px] px-2">
           <span className="mb-4 block text-lg font-medium uppercase tracking-wide text-primary-600">
             How it works
           </span>
