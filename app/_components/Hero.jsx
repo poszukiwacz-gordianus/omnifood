@@ -1,25 +1,26 @@
 import Image from "next/image";
-import hero from "@/public/img/hero.png";
 import Link from "next/link";
-
-const importAll = (requireContext) => requireContext.keys().map(requireContext);
-const avatars = importAll(
-  require.context("@/public/img/customers", false, /\.(png|jpe?g|svg)$/),
-);
+import { heroContent } from "../_content/content";
 
 export default function Hero() {
+  const {
+    header,
+    description,
+    avatars,
+    altAvatars,
+    highlightedText,
+    text,
+    heroImage,
+    altHero,
+  } = heroContent;
   return (
-    <section className="bg-primary-100 px-16 pb-24 pt-9">
-      <div className="mx-auto grid max-w-screen-xl grid-cols-2 items-center gap-12 gap-x-32">
+    <section className="bg-primary-100 px-10 pb-24 pt-9">
+      <div className="mx-auto grid max-w-[1300px] grid-cols-2 items-center gap-12 gap-x-32 p-4">
         <div>
           <h1 className="mb-8 text-5xl font-bold leading-none tracking-tight text-accent-500">
-            A healthy meal delivered to your door, every single day
+            {header}
           </h1>
-          <p className="mb-12 text-lg">
-            The smart 365-days-per-year food subscription that will make you eat
-            healthy again. Tailored to your personal tastes and nutritional
-            needs.
-          </p>
+          <p className="mb-12 text-lg">{description}</p>
           <Link
             href="#"
             className="mr-4 inline-block rounded-lg bg-primary-500 px-8 py-4 text-xl font-semibold text-secondary-50 transition-all duration-300 hover:bg-primary-600"
@@ -38,24 +39,22 @@ export default function Hero() {
               {avatars.map((avatar, i) => (
                 <Image
                   key={i}
-                  src={avatar.default}
-                  alt={`Customer photo`}
+                  src={avatar}
+                  alt={altAvatars}
                   className="-mr-4 h-12 w-12 rounded-full border-2 border-solid border-primary-100"
                 />
               ))}
             </div>
             <p className="text-lg font-semibold">
-              <span className="font-bold text-primary-600">250,000+</span> meals
-              delivered last year!
+              <span className="font-bold text-primary-600">
+                {highlightedText}
+              </span>
+              {text}
             </p>
           </div>
         </div>
         <div>
-          <Image
-            src={hero}
-            alt="Three images, woman enjoying food, meals in storage container, and food bowls on a table"
-            width="100%"
-          />
+          <Image src={heroImage} alt={altHero} width="100%" />
         </div>
       </div>
     </section>
