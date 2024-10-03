@@ -100,8 +100,20 @@ const meals = importAll(
 const mealsImages = meals.map((meal) => meal.default);
 
 export const mealsContent = {
-  header: "Omnifood works with any diet",
+  header: "Omnifood AI chooses from 5,000+ recipes",
   subHeader: "Meals",
+  headerList: "Works with any diet:",
+  diets: [
+    "Vegetarian",
+    "Vegan",
+    "Pescatarian",
+    "Gluten-free",
+    "Lactose-free",
+    "Keto",
+    "Paleo",
+    "Low FODMAP",
+    "Kid-friendly",
+  ],
   meals: [
     {
       mealImage: mealsImages[0],
@@ -119,4 +131,5 @@ export const mealsContent = {
       properties: { calories: 400, nutriScore: 92, rating: 4.8, reviews: 441 },
     },
   ],
+  link: "See all recipes →",
 };
