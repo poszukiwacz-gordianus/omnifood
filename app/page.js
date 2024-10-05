@@ -1,3 +1,4 @@
+import CallToAction from "./_section/CallToAction";
 import Featured from "./_section/Featured";
 import Header from "./_section/Header";
 import Hero from "./_section/Hero";
@@ -18,6 +19,7 @@ export default function Page() {
         <Meals />
         <Testimonials />
         <Pricing />
+        <CallToAction />
       </main>
     </>
   );

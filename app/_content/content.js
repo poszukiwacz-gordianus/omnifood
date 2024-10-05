@@ -39,7 +39,7 @@ export const heroContent = {
     "Three images, woman enjoying food, meals in storage container, and food bowls on a table",
 };
 
-/* FEATURED */
+/* FEATURED IN */
 
 const logos = importAll(
   require.context("@/public/img/logos", false, /\.(png|jpe?g|svg)$/),
@@ -227,26 +227,53 @@ export const pricingContent = {
 export const featuresContent = [
   {
     title: "Never cook again!",
-    content:
+    description:
       "Our subscriptions cover 365 days per year, even including major holidays.",
     icon: <IoInfiniteOutline />,
   },
   {
     title: "Local and organic",
-    content:
+    description:
       "Our cooks only use local, fresh, and organic products to prepare your meals.",
     icon: <IoNutritionOutline />,
   },
   {
     title: "No waste",
-    content:
+    description:
       "All our partners only use reusable containers to package all your meals.",
     icon: <IoLeafOutline />,
   },
   {
     title: "Pause anytime",
-    content:
+    description:
       "Going on vacation? Just pause your subscription, and we refund unused days.",
     icon: <IoPauseOutline />,
   },
 ];
+
+/* CALL TO ACTION */
+import eating from "@/public/img/eating.jpg";
+
+export const callToActionContent = {
+  header: "Get your first meal for free!",
+  description:
+    "Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!",
+  image: eating,
+  alt: "Women enjoying a meal",
+  formContent: {
+    fullName: "Full Name",
+    fullNamePlaceholder: "John Smith",
+    email: "Email address",
+    emailPlaceholder: "johnsmith@mail.com",
+    select: "Where did you hear from us?",
+    options: [
+      { value: "", option: "Please choose one option:" },
+      { value: "family", option: "Friends and family" },
+      { value: "youtube", option: "Youtube video" },
+      { value: "podcast", option: "Podcast" },
+      { value: "facebook", option: "Facebook ad" },
+      { value: "others", option: "Others" },
+    ],
+    button: "Sign up now",
+  },
+};

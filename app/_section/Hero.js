@@ -46,8 +46,9 @@ export default function Hero() {
             </p>
           </div>
         </div>
+
         <div>
-          <Image src={heroImage} alt={altHero} width="100%" />
+          <Image src={heroImage} alt={altHero} priority />
         </div>
       </div>
     </section>

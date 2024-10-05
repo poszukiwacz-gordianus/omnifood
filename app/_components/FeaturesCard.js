@@ -5,7 +5,7 @@ export default function FeaturesCard({ features }) {
         {feature.icon}
       </p>
       <p className="mb-4 text-2xl font-bold text-accent-500">{feature.title}</p>
-      <p className="text-lg">{feature.content}</p>
+      <p className="text-lg">{feature.description}</p>
     </div>
   ));
 }
