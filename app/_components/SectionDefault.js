@@ -1,5 +1,7 @@
-export default function SectionDefault({ children }) {
+export default function SectionDefault({ children, className }) {
   return (
-    <section className="mx-auto max-w-[1200px] px-2 py-24">{children}</section>
+    <section className={`mx-auto max-w-screen-lg px-2 py-24 ${className}`}>
+      {children}
+    </section>
   );
 }

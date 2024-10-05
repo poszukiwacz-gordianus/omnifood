@@ -5,7 +5,11 @@ import { logoContent } from "../_content/content";
 export default function Logo() {
   return (
     <Link href="#">
-      <Image src={logoContent.logo} alt={logoContent.alt} className="w-40" />
+      <Image
+        src={logoContent.logo}
+        alt={logoContent.alt}
+        className="block w-40"
+      />
     </Link>
   );
 }

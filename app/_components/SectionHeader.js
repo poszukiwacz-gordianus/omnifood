@@ -16,7 +16,7 @@ export default function SectionHeader({
 
       {header ? (
         <h2
-          className={`mb-24 text-5xl font-bold leading-none text-accent-500 ${headerClassName}`}
+          className={`mb-24 text-4xl font-bold leading-none text-accent-500 ${headerClassName}`}
         >
           {header}
         </h2>

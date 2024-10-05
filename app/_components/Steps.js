@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Steps({ children }) {
   return (
-    <div className="mx-auto grid max-w-[1200px] grid-cols-2 items-center gap-x-10 gap-y-24 px-2">
+    <div className="grid grid-cols-2 items-center gap-x-10 gap-y-24">
       {children}
     </div>
   );

@@ -9,11 +9,11 @@ export const logoContent = {
 };
 
 export const navigationContent = [
-  { link: "#", text: "Section 1" },
-  { link: "#", text: "Section 2" },
-  { link: "#", text: "Section 3" },
-  { link: "#", text: "Section 4" },
-  { link: "#", text: "Section 5" },
+  { link: "#", text: "How it works" },
+  { link: "#", text: "Meals" },
+  { link: "#", text: "Testimonials" },
+  { link: "#", text: "Pricing" },
+  { link: "#", text: "Try for free" },
 ];
 
 /* HERO */
@@ -63,6 +63,10 @@ import appScreen3 from "@/public/img/application/app-screen-3.png";
 import {
   IoInfiniteOutline,
   IoLeafOutline,
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoTwitch,
+  IoLogoTwitter,
   IoNutritionOutline,
   IoPauseOutline,
 } from "react-icons/io5";
@@ -276,4 +280,54 @@ export const callToActionContent = {
     ],
     button: "Sign up now",
   },
+};
+
+/* FOOTER */
+
+export const footerContent = {
+  copyrightText: (
+    <>
+      Copyright &copy; {new Date().getFullYear()} by Omnifood, Inc. All rights
+      reserved.
+    </>
+  ),
+  socialMediaLinks: [
+    { link: "#", media: <IoLogoInstagram /> },
+    { link: "#", media: <IoLogoFacebook /> },
+    { link: "#", media: <IoLogoTwitter /> },
+  ],
+  contactInfo: {
+    label: "Contact us",
+    address: "623 Harrison St., 2nd Floor, San Francisco, CA 94107",
+    phoneNumber: "415-201-6370",
+    email: "hello@omnifood.com",
+  },
+  footerLinks: [
+    {
+      section: "Account",
+      links: [
+        { link: "#", text: "Create account" },
+        { link: "#", text: "Sign in" },
+        { link: "#", text: "iOS app" },
+        { link: "#", text: "Android app" },
+      ],
+    },
+    {
+      section: "Company",
+      links: [
+        { link: "#", text: "About Omnifood" },
+        { link: "#", text: "For Business" },
+        { link: "#", text: "Cooking partners" },
+        { link: "#", text: "Careers" },
+      ],
+    },
+    {
+      section: "Resources",
+      links: [
+        { link: "#", text: "Recipe directory" },
+        { link: "#", text: "Help center" },
+        { link: "#", text: "Privacy & terms" },
+      ],
+    },
+  ],
 };

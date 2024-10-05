@@ -7,7 +7,7 @@ import { callToActionContent } from "../_content/content";
 export default function CallToAction() {
   const { header, description, image, alt, formContent } = callToActionContent;
   return (
-    <SectionDefault>
+    <SectionDefault className="pb-32 pt-12">
       <div className="grid grid-cols-[2fr_1fr] overflow-hidden rounded-lg bg-gradient-to-br from-primary-500 to-primary-400 text-primary-950 shadow-2xl">
         <div className="p-16 pt-12">
           <SectionHeader

@@ -15,7 +15,7 @@ export default function Pricing() {
       </div>
 
       <div>
-        <aside className="mb-24 text-center text-base text-accent-500">
+        <aside className="mb-24 text-center text-base text-accent-400">
           {footer}
         </aside>
       </div>

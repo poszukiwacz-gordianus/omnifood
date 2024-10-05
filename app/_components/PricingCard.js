@@ -2,9 +2,9 @@ import Button from "./Button";
 import List from "./List";
 
 export default function PricingCard({ plans }) {
-  return plans.map((plan) => (
+  return plans.map((plan, index) => (
     <div
-      key={plan.name}
+      key={index}
       className={` ${
         plan.name === "Complete"
           ? "relative overflow-hidden bg-primary-100 p-12"

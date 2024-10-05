@@ -1,5 +1,6 @@
 import CallToAction from "./_section/CallToAction";
 import Featured from "./_section/Featured";
+import Footer from "./_section/Footer";
 import Header from "./_section/Header";
 import Hero from "./_section/Hero";
 import HowItWorks from "./_section/HowItWorks";
@@ -21,6 +22,8 @@ export default function Page() {
         <Pricing />
         <CallToAction />
       </main>
+
+      <Footer />
     </>
   );
 }

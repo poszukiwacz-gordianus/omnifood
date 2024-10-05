@@ -6,7 +6,7 @@ export default function Featured() {
 
   return (
     <section className="px-8 py-12">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-screen-lg">
         <h2 className="mb-6 text-center text-sm font-medium uppercase tracking-wider text-secondary-400">
           {featuredIn}
         </h2>

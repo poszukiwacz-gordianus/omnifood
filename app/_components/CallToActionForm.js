@@ -12,7 +12,10 @@ export default function CallToActionForm({
   return (
     <form className="grid grid-cols-2 gap-x-8 gap-y-6" action="#">
       <div>
-        <label for="fullName" className="mb-3 block text-base font-semibold">
+        <label
+          htmlFor="fullName"
+          className="mb-3 block text-base font-semibold"
+        >
           {fullName}
         </label>
         <input
@@ -25,7 +28,7 @@ export default function CallToActionForm({
       </div>
 
       <div>
-        <label for="email" className="mb-3 block text-base font-semibold">
+        <label htmlFor="email" className="mb-3 block text-base font-semibold">
           {email}
         </label>
         <input
@@ -38,7 +41,7 @@ export default function CallToActionForm({
       </div>
 
       <div>
-        <label for="select" className="mb-3 block text-base font-semibold">
+        <label htmlFor="select" className="mb-3 block text-base font-semibold">
           {select}
         </label>
         <select
