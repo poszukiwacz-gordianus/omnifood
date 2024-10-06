@@ -8,7 +8,7 @@ export default function PricingCard({ plans }) {
         plan.name === "Complete"
           ? "relative overflow-hidden bg-primary-100 p-6 lg:p-12"
           : "items-stretch border-2 border-solid border-primary-100 p-[1.375rem] lg:justify-self-end lg:p-[2.875rem]"
-      } w-[80%] rounded-xl sm:w-[60%] md:w-full lg:w-[90%] xl:w-[70%]`}
+      } rounded-xl sm:w-[60%] md:w-full lg:w-[90%] xl:w-[70%]`}
     >
       <header className="mb-12 text-center">
         <p className="mb-8 text-lg font-semibold uppercase tracking-wider text-primary-600">
@@ -30,10 +30,12 @@ export default function PricingCard({ plans }) {
       </div>
 
       {plan.name === "Complete" ? (
-        <span className="absolute -right-[18%] top-[6%] rotate-45 bg-yellow-400 px-20 py-1 text-sm font-bold uppercase text-accent-500">
+        <span className="absolute -right-[30%] top-[6%] rotate-45 bg-yellow-400 px-20 py-1 text-sm font-bold uppercase text-accent-500 sm:-right-[20%] sm:top-[8%] md:-right-[19.5%] md:top-[7.5%] lg:-right-[17%] lg:top-[6%]">
           Best value
         </span>
       ) : null}
     </div>
   ));
 }
+
+//-right-[18%] top-[6%]

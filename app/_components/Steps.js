@@ -21,10 +21,10 @@ function StepImage({ image, alt }) {
 function StepInformations({ step, header, description }) {
   return (
     <div>
-      <p className="mb-3 text-6xl font-semibold text-secondary-200 xl:text-7xl">
+      <p className="mb-3 text-4xl font-semibold text-secondary-200 sm:text-6xl xl:text-7xl">
         {step}
       </p>
-      <h3 className="mb-8 text-lg font-bold leading-none text-accent-500 md:text-xl lg:text-2xl xl:text-3xl">
+      <h3 className="mb-4 text-base font-bold leading-none text-accent-500 sm:mb-8 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
         {header}
       </h3>
       <p className="text-sm leading-6 md:text-base lg:text-lg">{description}</p>

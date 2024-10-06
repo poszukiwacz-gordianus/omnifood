@@ -17,7 +17,7 @@ export default function FeaturedIn() {
               key={index}
               src={logo}
               alt={altLogos[index]}
-              className="h-[1rem] w-[4.5rem] opacity-50 brightness-0 md:h-[1.4rem] md:w-[7rem] lg:h-[1.9rem] lg:w-[8rem]"
+              className="h-[0.75rem] w-[3rem] opacity-50 brightness-0 sm:h-[1rem] sm:w-[4.5rem] md:h-[1.4rem] md:w-[7rem] lg:h-[1.9rem] lg:w-[8rem]"
             />
           ))}
         </div>

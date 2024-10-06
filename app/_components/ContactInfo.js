@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ContactInfo({ contactInfo }) {
   return (
-    <div className="order-3 col-span-2 md:order-2 md:col-span-1">
+    <div className="order-2 sm:order-3 sm:col-span-2 md:order-2 md:col-span-1">
       <p className="mb-6 text-sm font-medium lg:mb-8 lg:text-lg">
         {contactInfo.label}
       </p>
