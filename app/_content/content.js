@@ -32,8 +32,12 @@ export const heroContent = {
     "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
   avatars: avatarImages,
   altAvatars: "Customer photo",
-  highlightedText: "250,000+ ",
-  text: "meals delivered last year!",
+  additionalText: (
+    <>
+      <span className="font-bold text-primary-600">250,000+ </span>
+      meals delivered last year!
+    </>
+  ),
   heroImage: hero,
   altHero:
     "Three images, woman enjoying food, meals in storage container, and food bowls on a table",

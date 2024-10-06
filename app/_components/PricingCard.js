@@ -1,5 +1,4 @@
-import Button from "./Button";
-import List from "./List";
+import { Button, List } from "@/app/_components/Components";
 
 export default function PricingCard({ plans }) {
   return plans.map((plan, index) => (
@@ -7,19 +6,21 @@ export default function PricingCard({ plans }) {
       key={index}
       className={` ${
         plan.name === "Complete"
-          ? "relative overflow-hidden bg-primary-100 p-12"
-          : "justify-self-end border-2 border-solid border-primary-100 p-[46px]"
-      } w-[70%] rounded-lg`}
+          ? "relative overflow-hidden bg-primary-100 p-6 lg:p-12"
+          : "items-stretch border-2 border-solid border-primary-100 p-[1.375rem] lg:justify-self-end lg:p-[2.875rem]"
+      } w-[80%] rounded-xl sm:w-[60%] md:w-full lg:w-[90%] xl:w-[70%]`}
     >
       <header className="mb-12 text-center">
         <p className="mb-8 text-lg font-semibold uppercase tracking-wider text-primary-600">
           {plan.name}
         </p>
-        <p className="mb-4 text-6xl font-semibold text-accent-500">
+        <p className="mb-4 text-5xl font-semibold text-accent-500 lg:text-6xl">
           <span className="mr-2 text-3xl font-medium">$</span>
           {plan.price}
         </p>
-        <p className="text-base text-accent-400">{plan.description}</p>
+        <p className="text-sm text-accent-400 lg:text-base">
+          {plan.description}
+        </p>
       </header>
 
       <List lists={plan.features} />

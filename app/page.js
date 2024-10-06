@@ -1,12 +1,14 @@
-import CallToAction from "./_section/CallToAction";
-import Featured from "./_section/Featured";
-import Footer from "./_section/Footer";
-import Header from "./_section/Header";
-import Hero from "./_section/Hero";
-import HowItWorks from "./_section/HowItWorks";
-import Meals from "./_section/Meals";
-import Pricing from "./_section/Pricing";
-import Testimonials from "./_section/Testimonials";
+import {
+  CallToAction,
+  FeaturedIn,
+  Footer,
+  Header,
+  Hero,
+  HowItWorks,
+  Meals,
+  Pricing,
+  Testimonials,
+} from "@/app/_section/Section";
 
 export default function Page() {
   return (
@@ -15,7 +17,7 @@ export default function Page() {
 
       <main>
         <Hero />
-        <Featured />
+        <FeaturedIn />
         <HowItWorks />
         <Meals />
         <Testimonials />

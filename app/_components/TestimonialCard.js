@@ -6,10 +6,14 @@ export default function TestimonialCard({ testimonials = [] }) {
       <Image
         src={t.image}
         alt={`Photo of customer ${t.customer}`}
-        className="mb-3 w-16 rounded-full"
+        className="mb-3 w-12 rounded-full lg:w-16"
       />
-      <blockquote className="mb-4 text-lg">{t.testimonial}</blockquote>
-      <p className="text-base text-accent-400">&mdash; {t.customer}</p>
+      <blockquote className="mb-4 text-base sm:text-sm lg:text-base xl:text-lg">
+        {t.testimonial}
+      </blockquote>
+      <p className="text-sm text-accent-400 xl:text-base">
+        &mdash; {t.customer}
+      </p>
     </figure>
   ));
 }

@@ -8,7 +8,7 @@ export default function Logo() {
       <Image
         src={logoContent.logo}
         alt={logoContent.alt}
-        className="block w-40"
+        className="h-[1rem] w-32 md:h-[1.375rem] md:w-40"
       />
     </Link>
   );

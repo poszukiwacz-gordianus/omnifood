@@ -1,24 +1,28 @@
-import Gallery from "../_components/Gallery";
-import SectionHeader from "../_components/SectionHeader";
-import TestimonialCard from "../_components/TestimonialCard";
+import {
+  Gallery,
+  SectionHeader,
+  TestimonialCard,
+} from "@/app/_components/Components";
 import { galleryImages, testimonialsContent } from "../_content/content";
 
 export default function Testimonials() {
   const { header, subHeader, testimonials } = testimonialsContent;
   return (
-    <section className="grid grid-cols-[55fr_45fr] items-center bg-primary-100">
-      <div className="py-24 pl-12">
-        <div>
-          <SectionHeader header={header} subHeader={subHeader} />
+    <section className="bg-primary-100">
+      <div className="grid items-center lg:mx-auto lg:grid-cols-[55fr_45fr] xxl:max-w-screen-xl">
+        <div className="px-6 py-12 lg:py-24 lg:pl-12">
+          <div>
+            <SectionHeader header={header} subHeader={subHeader} />
+          </div>
+
+          <div className="grid gap-12 gap-x-12 gap-y-12 sm:grid-cols-2">
+            <TestimonialCard testimonials={testimonials} />
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-12 gap-x-12 gap-y-12">
-          <TestimonialCard testimonials={testimonials} />
+        <div className="grid grid-cols-4 gap-2 p-4 sm:grid-cols-6 lg:grid-cols-3">
+          <Gallery images={galleryImages} />
         </div>
-      </div>
-
-      <div className="grid grid-cols-3 gap-4 p-4">
-        <Gallery images={galleryImages} />
       </div>
     </section>
   );

@@ -7,6 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "34em",
+        // => @media (min-width: 544px) { ... }
+
+        md: "44em",
+        // => @media (min-width: 704px) { ... }
+
+        lg: "59em",
+        // => @media (min-width: 944px) { ... }
+
+        xl: "75em",
+        // => @media (min-width: 1200px) { ... }
+
+        xxl: "84em",
+        // => @media (min-width: 1344) { ... }
+      },
       colors: {
         primary: {
           50: "#FFFCF5",

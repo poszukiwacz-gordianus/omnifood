@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Steps({ children }) {
   return (
-    <div className="grid grid-cols-2 items-center gap-x-10 gap-y-24">
+    <div className="grid grid-cols-1 items-center gap-9 sm:grid-cols-2 md:mt-20">
       {children}
     </div>
   );
@@ -13,7 +13,7 @@ function StepImage({ image, alt }) {
     <div className="relative flex items-center justify-center">
       <span className="absolute -z-20 block w-[60%] rounded-full bg-primary-100 pb-[60%]"></span>
       <span className="absolute -z-10 block w-[45%] rounded-full bg-primary-200 pb-[45%]"></span>
-      <Image src={image} alt={alt} className="w-1/3" />
+      <Image src={image} alt={alt} className="w-[35%]" />
     </div>
   );
 }
@@ -21,11 +21,13 @@ function StepImage({ image, alt }) {
 function StepInformations({ step, header, description }) {
   return (
     <div>
-      <p className="mb-3 text-7xl font-semibold text-secondary-200">{step}</p>
-      <h3 className="mb-8 text-3xl font-bold leading-none text-accent-500">
+      <p className="mb-3 text-6xl font-semibold text-secondary-200 xl:text-7xl">
+        {step}
+      </p>
+      <h3 className="mb-8 text-lg font-bold leading-none text-accent-500 md:text-xl lg:text-2xl xl:text-3xl">
         {header}
       </h3>
-      <p className="text-lg">{description}</p>
+      <p className="text-sm leading-6 md:text-base lg:text-lg">{description}</p>
     </div>
   );
 }
