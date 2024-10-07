@@ -1,15 +1,14 @@
 "use client";
 
-import { useWindowSize } from "@uidotdev/usehooks";
 import { createContext, useState, useContext, useEffect } from "react";
 
-const StickyHeaderContext = createContext();
+const NavigationContext = createContext();
 
-function StickyHeaderProvider({ children }) {
+function NavigationProvider({ children }) {
   const [sticky, setSticky] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    console.log(sticky);
     const handleScroll = () => {
       const heroHeight = document.getElementById("hero").offsetHeight;
       if (window.scrollY > heroHeight) {
@@ -20,25 +19,31 @@ function StickyHeaderProvider({ children }) {
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [sticky]);
 
   return (
-    <StickyHeaderContext.Provider
+    <NavigationContext.Provider
       value={{
         sticky,
         setSticky,
+        isOpen,
+        setIsOpen,
       }}
     >
       {children}
-    </StickyHeaderContext.Provider>
+    </NavigationContext.Provider>
   );
 }
 
-function useStickyHeaderContext() {
-  const context = useContext(StickyHeaderContext);
+function useNavigationContext() {
+  const context = useContext(NavigationContext);
   if (context === undefined)
-    throw new Error("StickyContext was used outside of StickyHeaderProvider");
+    throw new Error("StickyContext was used outside of NavigationProvider");
   return context;
 }
 
-export { StickyHeaderProvider, useStickyHeaderContext };
+export { NavigationProvider, useNavigationContext };

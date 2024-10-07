@@ -13,7 +13,9 @@ export default function FooterBrandSection({
       <ul className="mt-6 flex gap-4 text-lg text-accent-400 transition-all duration-300 lg:mt-10 lg:gap-6 lg:text-2xl">
         {socialMediaLinks.map((social, index) => (
           <li key={index} className="hover:text-accent-500">
-            <Link href={social.link}>{social.media}</Link>
+            <Link href={social.link} aria-label={social.aria}>
+              {social.media}
+            </Link>
           </li>
         ))}
       </ul>

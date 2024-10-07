@@ -11,7 +11,13 @@ export default function MealCard({
   const { calories, nutriScore, rating, reviews } = properties;
   return (
     <div className="overflow-hidden rounded-xl shadow-[0_1.5rem_3rem_rgba(0,0,0,0.075)] transition-all duration-[400ms] ease-in-out hover:-translate-y-2 hover:shadow-[0_2rem_4rem_rgba(0,0,0,0.06)]">
-      <Image src={mealImage} alt={meal} className="w-full" />
+      <Image
+        src={mealImage}
+        alt={meal}
+        className="w-full"
+        sizes="100vw"
+        placeholder="blur"
+      />
 
       <div className="p-6 md:p-5 xl:p-12 xl:pt-8">
         <div className="flex gap-2 xl:mb-3 xl:mt-6">

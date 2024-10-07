@@ -6,6 +6,8 @@ export default function Gallery({ images }) {
       <Image
         src={image}
         alt="Photo of beautifully arranged food"
+        sizes="100vw"
+        placeholder="blur"
         className="w-full transition-all duration-[400ms] hover:scale-110"
       />
     </figure>

@@ -26,7 +26,13 @@ export default function CallToAction() {
           </div>
 
           <div className="relative order-1 sm:order-2">
-            <Image src={image} alt={alt} fill className="object-cover" />
+            <Image
+              src={image}
+              alt={alt}
+              fill
+              placeholder="blur"
+              className="object-cover"
+            />
             <span className="absolute inset-0 z-10 bg-gradient-to-br from-primary-500 to-primary-400 opacity-35"></span>
           </div>
         </div>

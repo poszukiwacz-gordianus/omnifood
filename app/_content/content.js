@@ -298,9 +298,9 @@ export const footerContent = {
     </>
   ),
   socialMediaLinks: [
-    { link: "#", media: <IoLogoInstagram /> },
-    { link: "#", media: <IoLogoFacebook /> },
-    { link: "#", media: <IoLogoTwitter /> },
+    { link: "#", media: <IoLogoInstagram />, aria: "Instagram" },
+    { link: "#", media: <IoLogoFacebook />, aria: "Facebook" },
+    { link: "#", media: <IoLogoTwitter />, aria: "Twitter" },
   ],
   contactInfo: {
     label: "Contact us",

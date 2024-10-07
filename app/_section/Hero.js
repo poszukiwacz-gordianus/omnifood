@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { heroContent } from "../_content/content";
 import { Button, SectionHeader } from "@/app/_components/Components";
-import { useStickyHeaderContext } from "../_context/StickyHeaderContext";
+import { useNavigationContext } from "../_context/NavigationContext";
 
 export default function Hero() {
   const {
@@ -20,7 +20,7 @@ export default function Hero() {
     altHero,
   } = heroContent;
 
-  const { sticky } = useStickyHeaderContext();
+  const { sticky } = useNavigationContext();
 
   return (
     <section className={`${sticky ? "mt-24" : ""} bg-primary-100`} id="hero">
@@ -48,6 +48,7 @@ export default function Hero() {
                   key={i}
                   src={avatar}
                   alt={altAvatars}
+                  sizes="100vw"
                   className="-mr-4 h-9 w-9 rounded-full border-2 border-solid border-primary-100 sm:-mr-2 lg:-mr-4 lg:h-12 lg:w-12 lg:border-[3px] xl:h-14 xl:w-14"
                 />
               ))}
@@ -61,8 +62,9 @@ export default function Hero() {
         <Image
           src={heroImage}
           alt={altHero}
+          sizes="100vw"
+          placeholder="blur"
           priority
-          q={100}
           className="w-60 sm:w-80 lg:w-full"
         />
       </div>
