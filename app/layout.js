@@ -1,5 +1,6 @@
 import "@/app/_styles/global.css";
 import { Rubik } from "next/font/google";
+import { StickyHeaderProvider } from "./_context/StickyHeaderContext";
 
 export const metadata = {
   title: "Omnifood",
@@ -13,9 +14,9 @@ const rubik = Rubik({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en" className="overflow-x-hidden scroll-smooth">
       <body className={`${rubik.variable} overflow-x-hidden font-sans`}>
-        {children}
+        <StickyHeaderProvider>{children}</StickyHeaderProvider>
       </body>
     </html>
   );

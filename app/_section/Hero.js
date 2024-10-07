@@ -1,11 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { heroContent } from "../_content/content";
 import { Button, SectionHeader } from "@/app/_components/Components";
+import { useStickyHeaderContext } from "../_context/StickyHeaderContext";
 
 export default function Hero() {
   const {
     primaryButton,
+    primaryAction,
     secondaryButton,
+    secondaryAction,
     header,
     description,
     avatars,
@@ -14,8 +19,11 @@ export default function Hero() {
     heroImage,
     altHero,
   } = heroContent;
+
+  const { sticky } = useStickyHeaderContext();
+
   return (
-    <section className="bg-primary-100">
+    <section className={`${sticky ? "mt-24" : ""} bg-primary-100`} id="hero">
       <div className="flex flex-col items-center justify-center gap-10 p-2 text-center sm:p-6 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-6 lg:px-8 lg:text-left xl:gap-20 xl:px-10 xxl:max-w-screen-xl">
         <div className="flex flex-col items-center justify-center gap-8 lg:items-start">
           <SectionHeader
@@ -26,9 +34,11 @@ export default function Hero() {
             {description}
           </p>
 
-          <div className="flex gap-1 sm:gap-4 lg:mb-8 lg:gap-8">
-            <Button>{primaryButton}</Button>
-            <Button type="secondary">{secondaryButton}</Button>
+          <div className="flex gap-4 lg:mb-8 lg:gap-8">
+            <Button href={primaryAction}>{primaryButton}</Button>
+            <Button href={secondaryAction} type="secondary">
+              {secondaryButton}
+            </Button>
           </div>
 
           <div className="flex items-center">

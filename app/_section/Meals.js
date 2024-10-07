@@ -11,7 +11,7 @@ import { mealsContent } from "../_content/content";
 export default function Meals() {
   const { header, subHeader, headerList, diets, meals, link } = mealsContent;
   return (
-    <SectionDefault>
+    <SectionDefault id="meals">
       <Container>
         <div className="text-center">
           <SectionHeader header={header} subHeader={subHeader} />

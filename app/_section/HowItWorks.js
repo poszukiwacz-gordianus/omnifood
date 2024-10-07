@@ -15,7 +15,7 @@ export default function HowItWorks() {
   const { width } = useWindowSize();
 
   return (
-    <SectionDefault>
+    <SectionDefault id="how">
       <Container>
         <SectionHeader header={header} subHeader={subHeader} />
 

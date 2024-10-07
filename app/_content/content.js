@@ -9,11 +9,11 @@ export const logoContent = {
 };
 
 export const navigationContent = [
-  { link: "#", text: "How it works" },
-  { link: "#", text: "Meals" },
-  { link: "#", text: "Testimonials" },
-  { link: "#", text: "Pricing" },
-  { link: "#", text: "Try for free" },
+  { link: "#how", text: "How it works" },
+  { link: "#meals", text: "Meals" },
+  { link: "#testimonials", text: "Testimonials" },
+  { link: "#pricing", text: "Pricing" },
+  { link: "#cta", text: "Try for free" },
 ];
 
 /* HERO */
@@ -26,7 +26,9 @@ const avatarImages = avatars.map((avatar) => avatar.default);
 
 export const heroContent = {
   primaryButton: "Start eating well",
-  secondaryButton: `Learn more ↓`,
+  primaryAction: "#cta",
+  secondaryButton: "Learn more ↓",
+  secondaryAction: "#how",
   header: "A healthy meal delivered to your door, every single day",
   description:
     "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",

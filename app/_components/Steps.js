@@ -10,7 +10,7 @@ function Steps({ children }) {
 
 function StepImage({ image, alt }) {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex translate-y-6 items-center justify-center sm:translate-y-0">
       <span className="absolute -z-20 block w-[60%] rounded-full bg-primary-100 pb-[60%]"></span>
       <span className="absolute -z-10 block w-[45%] rounded-full bg-primary-200 pb-[45%]"></span>
       <Image src={image} alt={alt} className="w-[35%]" />

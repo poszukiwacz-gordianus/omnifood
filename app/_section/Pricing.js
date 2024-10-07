@@ -10,7 +10,7 @@ import { featuresContent, pricingContent } from "../_content/content";
 export default function Pricing() {
   const { header, subHeader, footer, pricingPlans } = pricingContent;
   return (
-    <SectionDefault>
+    <SectionDefault id="pricing">
       <Container>
         <SectionHeader header={header} subHeader={subHeader} />
 
