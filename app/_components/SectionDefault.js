@@ -4,7 +4,7 @@ export default function SectionDefault({
   id = null,
 }) {
   return (
-    <section id={id} className={`py-6 sm:py-12 lg:py-24 ${className}`}>
+    <section id={id} className={`py-6 sm:py-12 xl:py-24 ${className}`}>
       {children}
     </section>
   );

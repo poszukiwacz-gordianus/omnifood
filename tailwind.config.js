@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: "31.25em",
-        // => @media (min-width: 500px) { ... }
+        sm: "34em",
+        // => @media (min-width: 544px) { ... }
 
         md: "44em",
         // => @media (min-width: 704px) { ... }

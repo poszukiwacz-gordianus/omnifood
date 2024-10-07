@@ -6,7 +6,7 @@ export default function FooterBrandSection({
   copyrightText,
 }) {
   return (
-    <div className="order-3 flex flex-col sm:order-2 md:order-1">
+    <div className="order-3 flex flex-col items-center sm:order-2 sm:items-baseline md:order-1">
       <span className="p-[2px] md:p-[1px] lg:p-1"></span>
       <Logo />
 

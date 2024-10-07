@@ -24,11 +24,11 @@ export default function Hero() {
 
   return (
     <section className={`${sticky ? "mt-24" : ""} bg-primary-100`} id="hero">
-      <div className="flex flex-col items-center justify-center gap-10 p-2 text-center sm:p-6 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-6 lg:px-8 lg:text-left xl:gap-20 xl:px-10 xxl:max-w-screen-xl">
+      <div className="flex flex-col items-center justify-center gap-10 p-2 text-center sm:p-6 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-6 lg:px-20 lg:text-left xl:gap-20 xl:px-10 xxl:max-w-screen-xl">
         <div className="flex flex-col items-center justify-center gap-8 lg:items-start">
           <SectionHeader
             header={header}
-            headerClassName="!text-2xl sm:!text-4xl xl:text-5xl"
+            headerClassName="!text-2xl sm:!text-4xl xl:!text-5xl"
           />
           <p className="-mt-10 mb-5 px-6 text-sm sm:text-base lg:px-0 lg:text-lg xl:text-xl">
             {description}
