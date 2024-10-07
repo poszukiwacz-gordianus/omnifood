@@ -6,7 +6,7 @@ export default function FeaturedIn() {
   const { featuredIn, logoImages, altLogos } = featuredContent;
 
   return (
-    <section className="pb-2 pt-6 lg:pb-8 lg:pt-12">
+    <section className="my-6 pt-6 lg:pb-8 lg:pt-12">
       <Container>
         <h2 className="mb-6 text-center text-xs font-medium uppercase tracking-wider text-secondary-400 lg:text-sm">
           {featuredIn}

@@ -8,9 +8,12 @@ import { galleryImages, testimonialsContent } from "../_content/content";
 export default function Testimonials() {
   const { header, subHeader, testimonials } = testimonialsContent;
   return (
-    <section className="bg-primary-100" id="testimonials">
+    <section
+      className="bg-primary-100 py-10 sm:py-12 lg:py-24"
+      id="testimonials"
+    >
       <div className="grid items-center lg:mx-auto lg:grid-cols-[55fr_45fr] xxl:max-w-screen-xl">
-        <div className="px-6 py-12 lg:py-24 lg:pl-12">
+        <div className="px-6">
           <div>
             <SectionHeader header={header} subHeader={subHeader} />
           </div>
