@@ -9,6 +9,27 @@ function NavigationProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    const allLinks = document.querySelectorAll("a[href]");
+    allLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+
+        if (href.startsWith("#")) {
+          e.preventDefault();
+          link.blur(); // Removes the focus from the link, hence removing the box-shadow
+
+          if (href === "#") window.scrollTo({ top: 0, behavior: "smooth" });
+
+          if (href !== "#") {
+            const sectionEl = document.querySelector(href);
+            sectionEl.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
+    });
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       const heroHeight = document.getElementById("hero").offsetHeight;
       if (window.scrollY > heroHeight) {

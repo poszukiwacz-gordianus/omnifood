@@ -30,6 +30,7 @@ export default function CallToAction() {
               src={image}
               alt={alt}
               fill
+              sizes="auto"
               placeholder="blur"
               className="object-cover"
             />

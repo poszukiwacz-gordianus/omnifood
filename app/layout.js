@@ -15,7 +15,7 @@ const rubik = Rubik({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="overflow-x-hidden scroll-smooth">
+    <html lang="en" className="overflow-x-hidden">
       <body className={`${rubik.variable} overflow-x-hidden font-sans`}>
         <NavigationProvider>{children}</NavigationProvider>
       </body>

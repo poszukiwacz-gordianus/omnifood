@@ -4,7 +4,7 @@ import { logoContent } from "../_content/content";
 
 export default function Logo() {
   return (
-    <Link href="#home">
+    <Link href="#">
       <Image
         src={logoContent.logo}
         alt={logoContent.alt}

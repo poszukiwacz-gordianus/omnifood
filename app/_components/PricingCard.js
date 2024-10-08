@@ -8,9 +8,9 @@ export default function PricingCard({ plans }) {
         plan.name === "Complete"
           ? "relative overflow-hidden bg-primary-100 p-6 lg:p-12"
           : "items-stretch border-2 border-solid border-primary-100 p-[1.375rem] lg:justify-self-end lg:p-[2.875rem]"
-      } rounded-xl sm:w-[60%] md:w-full lg:w-[90%] xl:w-[70%]`}
+      } flex flex-col gap-5 rounded-xl sm:w-[60%] sm:gap-10 md:w-full lg:w-[90%] xl:w-[80%]`}
     >
-      <header className="mb-12 text-center">
+      <header className="text-center">
         <p className="mb-8 text-lg font-semibold uppercase tracking-wider text-primary-600">
           {plan.name}
         </p>
@@ -25,7 +25,7 @@ export default function PricingCard({ plans }) {
 
       <List lists={plan.features} />
 
-      <div className="mt-12 text-center">
+      <div className="mt-auto text-center">
         <Button>{plan.button}</Button>
       </div>
 
@@ -37,5 +37,3 @@ export default function PricingCard({ plans }) {
     </div>
   ));
 }
-
-//-right-[18%] top-[6%]
